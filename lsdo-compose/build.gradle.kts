@@ -19,7 +19,7 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            api(project(":lsdo"))
+            api(project(":lsdo-core"))
             implementation(libs.compose.runtime)
         }
     }

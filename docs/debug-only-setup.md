@@ -1,6 +1,6 @@
 # Debug-only setup per platform
 
-The contract (`lsdo`, `lsdo-compose`) is a normal dependency. The runtime is not: it carries a
+The contract (`lsdo-core`, `lsdo-compose`) is a normal dependency. The runtime is not: it carries a
 web server and must never reach a release build. Each platform has its own way to keep it out.
 
 **Android**: `debugImplementation` plus two source-set twins.

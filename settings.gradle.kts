@@ -16,4 +16,4 @@ dependencyResolutionManagement {
     }
 }
 
-include(":lsdo", ":lsdo-compose", ":lsdo-runtime", ":lsdo-runtime-compose", ":sample")
+include(":lsdo-core", ":lsdo-compose", ":lsdo-runtime", ":lsdo-runtime-compose", ":sample")

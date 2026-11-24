@@ -4,7 +4,7 @@
 
 First release, extracted from the app it was built in.
 
-- `lsdo`: the contract (`LsDoScreen`, `LsDoSpec`/`lsdoSpec`, `@Doc`, `LsDo`, `LsDoEntry`).
+- `lsdo-core`: the contract (`LsDoScreen`, `LsDoSpec`/`lsdoSpec`, `@Doc`, `LsDo`, `LsDoEntry`).
 - `lsdo-compose`: `RegisterLsDo(name, screen)`.
 - `lsdo-runtime`: the registry (idle waiting, availability), JSON schemas from serial descriptors,
   the loopback HTTP server (`/ls`, `/do`, `/ui`, `/catalog`, `X-LsDo` header), `UiNode`, the catalog.

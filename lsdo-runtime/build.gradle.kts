@@ -21,7 +21,7 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            api(project(":lsdo"))
+            api(project(":lsdo-core"))
             implementation(libs.ktor.server.core)
             implementation(libs.ktor.server.cio)
         }

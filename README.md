@@ -12,7 +12,7 @@ schemas agents read are derived from your Kotlin types.
 
 ## Quick start
 
-**1. Make a screen drivable** (usually its ViewModel; `lsdo` and `lsdo-compose` are normal dependencies):
+**1. Make a screen drivable** (usually its ViewModel; `lsdo-core` and `lsdo-compose` are normal dependencies):
 
 ```kotlin
 @Serializable
@@ -68,7 +68,7 @@ Try it without a device: `./gradlew :sample:run`, then `LSDO_URL=http://127.0.0.
 
 `io.github.axellaffite.lsdo:<artifact>:0.1.0-SNAPSHOT` (`./gradlew publishToMavenLocal` for now).
 
-- `lsdo`: the contract. Every build.
+- `lsdo-core`: the contract. Every build.
 - `lsdo-compose`: `RegisterLsDo`. Every build.
 - `lsdo-runtime`: registry, schemas, server, catalog. Debug only.
 - `lsdo-runtime-compose`: Android and iOS UI capture, `LsDoDevTools.start`. Debug only.
