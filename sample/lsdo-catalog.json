@@ -1,0 +1,86 @@
+{
+    "screens": [
+        {
+            "name": "counter",
+            "description": "A counter. Always shown.",
+            "actions": [
+                {
+                    "name": "add",
+                    "description": "Add n to the count",
+                    "params": {
+                        "type": "object",
+                        "properties": {
+                            "n": {
+                                "type": "integer",
+                                "description": "How much to add; positive"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "reset",
+                    "description": "Back to zero. Not at zero",
+                    "params": {
+                        "type": "object",
+                        "properties": {}
+                    }
+                },
+                {
+                    "name": "slow_add",
+                    "description": "Add n after a delay, as a save to a server would; the screen is busy meanwhile. Not while saving",
+                    "params": {
+                        "type": "object",
+                        "properties": {
+                            "n": {
+                                "type": "integer"
+                            }
+                        }
+                    }
+                }
+            ],
+            "state": {
+                "type": "object",
+                "properties": {
+                    "count": {
+                        "type": "integer",
+                        "description": "The current count"
+                    },
+                    "saving": {
+                        "type": "boolean",
+                        "description": "True while a slow_add is saving"
+                    }
+                }
+            }
+        },
+        {
+            "name": "settings",
+            "description": "The app's settings. Never shown in this sample: it is here to show the catalog.",
+            "actions": [
+                {
+                    "name": "set_dark",
+                    "description": "Turn the dark theme on or off",
+                    "params": {
+                        "type": "object",
+                        "properties": {
+                            "on": {
+                                "type": "boolean"
+                            }
+                        },
+                        "required": [
+                            "on"
+                        ]
+                    }
+                }
+            ],
+            "state": {
+                "type": "object",
+                "properties": {
+                    "dark": {
+                        "type": "boolean",
+                        "description": "Dark theme on"
+                    }
+                }
+            }
+        }
+    ]
+}
