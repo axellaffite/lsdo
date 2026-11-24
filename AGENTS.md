@@ -14,6 +14,8 @@ For coding agents working on an app that uses LS-DO. To drive an app instead, re
    - Parameters are constructor properties; give defaults where the UI has them; `@Doc` them if unclear.
 3. **Screen**: implement `LsDoScreen<State, Intent>`, usually on the ViewModel.
    - `override val lsdo = lsdoSpec<State, Intent>()` and `override val state: StateFlow<State>`.
+   - When `state` is a serializable view of the UI state, derive it with `mapState`/`combineState`,
+     never `stateIn(scope, SharingStarted.Eagerly)`: that keeps a coroutine alive on the scope's dispatcher.
    - `perform(intent)` calls **the same functions the UI calls**. Never write a second code path.
    - Return `null` when done, or a sentence saying why it was refused and what to do instead.
      Throw only for real errors (they come back as `"<action>" failed: ...`).

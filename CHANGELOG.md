@@ -5,6 +5,7 @@
 First release, extracted from the app it was built in.
 
 - `lsdo-core`: the contract (`LsDoScreen`, `LsDoSpec`/`lsdoSpec`, `@Doc`, `LsDo`, `LsDoEntry`).
+- `mapState`/`combineState` (`lsdo-core`): coroutine-free derived `StateFlow`s for a screen's serializable view.
 - `lsdo-compose`: `RegisterLsDo(name, screen)`.
 - `lsdo-runtime`: the registry (idle waiting, availability), JSON schemas from serial descriptors,
   the loopback HTTP server (`/ls`, `/do`, `/ui`, `/catalog`, `X-LsDo` header), `UiNode`, the catalog.
