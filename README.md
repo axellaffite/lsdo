@@ -45,7 +45,7 @@ fun CounterScreen(vm: CounterViewModel) {
 ```
 
 **2. Start it in debug builds only** (`lsdo-runtime-compose` as `debugImplementation`, called from
-`src/debug`, in `Application.onCreate` on Android; see [debug-only setup](docs/debug-only.md)):
+`src/debug`, in `Application.onCreate` on Android; see [debug-only setup](docs/debug-only-setup.md)):
 
 ```kotlin
 LsDoDevTools.start(catalog = listOf(LsDoEntry("counter", "A counter. Reached by: the Counter tab.", lsdoSpec<CounterState, CounterIntent>())))
@@ -77,8 +77,8 @@ Try it without a device: `./gradlew :sample:run`, then `LSDO_URL=http://127.0.0.
 
 - [AGENTS.md](AGENTS.md): adding LS-DO to a screen, for coding agents.
 - [skills/lsdo](skills/lsdo/SKILL.md): driving an app with LS-DO, for agents (Claude Code skill).
-- [Debug-only setup per platform](docs/debug-only.md), with release-leak checks.
-- [CLI](docs/cli.md), [HTTP API](docs/http-api.md), [catalog file](docs/catalog-file.md).
+- [Debug-only setup per platform](docs/debug-only-setup.md), with release-leak checks.
+- [CLI](docs/cli.md), [HTTP API](docs/http-api.md), [catalog file](docs/catalog.md).
 - [Security and limits](docs/security.md), [related projects](docs/related-projects.md).
 - [Trace verifier agent](agents/lsdo-verifier.md).
 

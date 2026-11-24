@@ -27,7 +27,7 @@ For coding agents working on an app that uses LS-DO. To drive an app instead, re
    Without Compose: `val remove = LsDo.register("name", screen)`, then `remove()` when it leaves.
 5. **Catalog**: add `LsDoEntry("name", "<what it is>. Reached by: <route>.", lsdoSpec<State, Intent>())`
    to the app's catalog list. If the app commits `lsdo-catalog.json`, regenerate it (see
-   [docs/catalog-file.md](docs/catalog-file.md)).
+   [docs/catalog.md](docs/catalog.md)).
 6. **Test** through `LsDoRegistry` (`lsdo-runtime` as a test dependency), not by calling `perform`:
 
    ```kotlin
@@ -42,7 +42,7 @@ For coding agents working on an app that uses LS-DO. To drive an app instead, re
 ## Rules
 
 - `lsdo-runtime` and `lsdo-runtime-compose` are debug-only. Never add them to a release
-  configuration or to `src/main`/`iosMain` directly; follow [docs/debug-only.md](docs/debug-only.md).
+  configuration or to `src/main`/`iosMain` directly; follow [docs/debug-only-setup.md](docs/debug-only-setup.md).
 - Every state field and action an agent needs must be in the types: the schemas come from them.
 - Renaming a `@SerialName` breaks scripts and traces: treat names as API.
 

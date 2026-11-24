@@ -1,6 +1,6 @@
 # Security and limits
 
-- **Debug builds only.** Keep the runtime out of release builds with the [recipes](debug-only.md) and their
+- **Debug builds only.** Keep the runtime out of release builds with the [recipes](debug-only-setup.md) and their
   checks. The contract modules contain no server.
 - **Loopback only.** The server binds `127.0.0.1`: other machines on the network cannot reach it.
   A device is reached through `adb forward` or the simulator's shared loopback.
