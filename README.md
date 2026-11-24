@@ -66,7 +66,13 @@ Try it without a device: `./gradlew :sample:run`, then `LSDO_URL=http://127.0.0.
 
 ## Modules
 
-`io.github.axellaffite.lsdo:<artifact>:0.1.0-SNAPSHOT` (`./gradlew publishToMavenLocal` for now).
+On Maven Central as `io.github.axellaffite.lsdo:<artifact>:<version>`, for Android, JVM, iosArm64 and
+iosSimulatorArm64 (`lsdo-runtime-compose`: Android and iOS):
+
+```kotlin
+implementation("io.github.axellaffite.lsdo:lsdo-compose:0.1.0")               // pulls lsdo-core
+debugImplementation("io.github.axellaffite.lsdo:lsdo-runtime-compose:0.1.0")  // pulls lsdo-runtime
+```
 
 - `lsdo-core`: the contract. Every build.
 - `lsdo-compose`: `RegisterLsDo`. Every build.
@@ -79,7 +85,7 @@ Try it without a device: `./gradlew :sample:run`, then `LSDO_URL=http://127.0.0.
 - [skills/lsdo](skills/lsdo/SKILL.md): driving an app with LS-DO, for agents (Claude Code skill).
 - [Debug-only setup per platform](docs/debug-only-setup.md), with release-leak checks.
 - [CLI](docs/cli.md), [HTTP API](docs/http-api.md), [catalog file](docs/catalog.md).
-- [Security and limits](docs/security.md), [related projects](docs/related-projects.md).
+- [Security and limits](docs/security.md), [related projects](docs/related-projects.md), [releasing](docs/releasing.md).
 - [Trace verifier agent](agents/lsdo-verifier.md).
 
 [MIT](LICENSE)

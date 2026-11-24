@@ -8,8 +8,8 @@ web server and must never reach a release build. Each platform has its own way t
 ```kotlin
 // app/build.gradle.kts
 dependencies {
-    implementation("io.github.axellaffite.lsdo:lsdo-compose:0.1.0-SNAPSHOT")
-    debugImplementation("io.github.axellaffite.lsdo:lsdo-runtime-compose:0.1.0-SNAPSHOT")
+    implementation("io.github.axellaffite.lsdo:lsdo-compose:0.1.0")
+    debugImplementation("io.github.axellaffite.lsdo:lsdo-runtime-compose:0.1.0")
 }
 ```
 
@@ -77,7 +77,7 @@ kotlin {
     sourceSets {
         iosMain {
             kotlin.srcDir(if (lsdoEnabled) "src/iosLsDo/kotlin" else "src/iosNoLsDo/kotlin")
-            if (lsdoEnabled) dependencies { implementation("io.github.axellaffite.lsdo:lsdo-runtime-compose:0.1.0-SNAPSHOT") }
+            if (lsdoEnabled) dependencies { implementation("io.github.axellaffite.lsdo:lsdo-runtime-compose:0.1.0") }
         }
     }
 }

@@ -13,3 +13,4 @@ First release, extracted from the app it was built in.
 - An action on a busy screen now waits (up to the timeout) for it to settle before its availability
   is judged, so a first action on a still-loading screen is not refused.
 - `scripts/lsdo` (ls, do, ui, catalog, traces with screenshots) and the `lsdo-verifier` agent.
+- Published to Maven Central (`io.github.axellaffite.lsdo`), released from a `vX.Y.Z` tag.

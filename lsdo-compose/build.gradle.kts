@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.android.kmp.library)
+    alias(libs.plugins.maven.publish)
 }
 
 kotlin {
