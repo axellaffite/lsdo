@@ -17,7 +17,7 @@
 - **Compose Hot Reload MCP**: an experimental MCP server in Compose Hot Reload that lets coding agents
   reload a running Compose desktop app, take screenshots and inspect its semantic tree. About editing
   code live, not driving screens by their actions.
-- **cmp-bridge**: connects a running Compose Multiplatform app to an agent.
+- **[cmp-bridge](https://klibs.io/project/CRamsan/cmp-bridge)**: drives a running Compose Multiplatform app (live semantics tree, screenshots, real input) over REST and MCP. No app-defined actions or state.
 
 What LS-DO combines: actions and state declared by the app itself, a snapshot of what is really
 rendered next to them, schemas derived from the Kotlin types, availability and busy-waiting per
