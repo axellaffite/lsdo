@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- iOS: `LsDoDevTools` no longer crashes the app on its first log line (a Kotlin `String` was passed
+  to `NSLog` as a vararg, which Kotlin/Native does not bridge to `NSString`).
+
 ## 0.1.0 (2026-11-24)
 
 First release, extracted from the app it was built in.

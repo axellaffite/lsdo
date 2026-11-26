@@ -25,5 +25,8 @@ kotlin {
             implementation(libs.compose.ui)
             implementation(libs.coroutines.android)
         }
+        iosTest.dependencies {
+            implementation(libs.kotlin.test)
+        }
     }
 }
